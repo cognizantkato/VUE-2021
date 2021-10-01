@@ -13,7 +13,6 @@
         <label for="goal">{{appTitle}}</label>
         <input type="text" id="order" v-model="order"/>
         <button v-on:click="addOrder" v-bind:disabled="disabledAddButton">Add Order</button>
-        
       </div>
       <ul>
         <li v-for="o in orders">{{o}}</li>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic and Core Concepts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Minute Burger Machine</h1>
+    </header>
+    <section id="my-orders">
+      <h2>{{orderHeader}}</h2>
+      <p v-for="o in orders">
+        {{o.name}} 
+        Qty: {{o.count}}
+        <button @click="decrement(o.name)">-</button>
+        <button @click="increment(o.name)">+</button>
+      </p>
+      <input type="text" v-model="order">
+      <button @click="addOrder()" :disabled="disabledAddButton">Add Order</button>
+      <!-- <p v-if="orders.length > 0">Total Orders: {{outputTotalOrders}}</p>
+      <p v-else>Please add your orders</p> -->
+      <p v-show="orders.length > 0">Total Orders: {{outputTotalOrders}}</p>
+      <p v-show="orders.length <= 0">Please add your orders</p>
+    </section>
+  </body>
+  <script src="app.js" defer></script>
+</html>

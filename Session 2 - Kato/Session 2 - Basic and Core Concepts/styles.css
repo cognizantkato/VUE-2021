@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: auto;
+  padding: 1rem;
+  background-color: #FD5E00;
+  color: white;
+  text-align: center;
+  width: 90%;
+}
+
+#my-orders {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  width: 90%;
+}
+
+#my-orders h2 {
+  font-size: 2rem;
+  border-bottom: 4px solid #ccc;
+  color: #FD5E00;
+  margin: 0 0 1rem 0;
+}
+
+#my-orders p {
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid yellow;
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+}
+
+#my-orders input {
+  font: inherit;
+  border: 1px solid #ccc;
+}
+
+#my-orders input:focus {
+  outline: none;
+  border-color: yellow;
+  background-color: #faffec;
+}
+
+#my-orders button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #FD5E00;
+  background-color: #FD5E00;
+  color: white;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+}
+
+#my-orders button:hover,
+#my-orders button:active {
+  background-color: #c64800;
+  border-color: #c64800;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
