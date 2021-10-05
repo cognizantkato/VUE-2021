@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders - A Sample Vue App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app-game">
+      <div class="main-stage">
+        <div class="player-stage">
+          <div class="health-container center border-2">
+            <div class="health-bar" :style="playerHealthDisplay"></div>
+          </div>
+          <div class="player-name">
+            <span>{{player.name}}</span>
+          </div>
+        </div>
+        <div class="player-stage">
+          <div class="health-container border-2">
+            <div class="health-bar" :style="goblinHealthDisplay"></div>
+          </div>
+          <div class="player-name">
+            <span>{{goblin.name}} </span>
+          </div>
+        </div>
+      </div>
+      <div class="text-align-center action-btns">
+        <button v-for="a in actions" @click="action(a.key)" :disabled="isActionDisabled">{{a.name}}</button>
+      </div>
+      <div class="game-logs-container text-align-center">
+        <div class="game-logs" v-for="log in actionLogs">
+          <span>{{log}}</span>
+        </div>
+      </div>
+
+      <div class="modal" v-if="isDone">
+        <div class="modal-content text-align-center">
+          <p class="game-end-msg">{{gameEndingMessage}}</p>
+          <button @click="reset()">PLAY AGAIN</button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
